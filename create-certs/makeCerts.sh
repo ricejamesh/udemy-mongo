@@ -1,0 +1,1 @@
+openssl rq -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -day 365
