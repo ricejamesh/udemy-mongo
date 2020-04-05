@@ -1,0 +1,31 @@
+[req]
+# 
+# Great source information for config files on github
+# https://gist.github.com/Soarez/9688998
+#
+
+default_bits = 2048
+default_keyfile = localhost_dev.key
+encrypt_key = no
+prompt = no
+utf8 = yes
+distinguished_name = dn
+req_extensions = my_ext
+
+[dn]
+commonName=localhost
+emailAddress=fake@localhost.dev
+O=Local Host Solutions Inc
+OU=Local Host Group
+ST=Virginia
+L=Warrenton
+C=US
+
+[my_ext]
+basicConstraints=CA:FALSE
+subjectAltName = @subj_alt_names
+subjectKeyIdentifier = hash
+
+[subj_alt_names]
+DNS.1 = *.localhost
+DNS.2 = localhost
